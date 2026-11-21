@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>META IT SCHOOL — Andijondagi Zamonaviy IT O'quv Markazi</title>
+  <meta name="description" content="Andijon shahridagi META IT SCHOOL zamonaviy IT va texnologiyalar o'quv markazi. Frontend, Backend, Python, AI Engineer, Kiberxavfsizlik kurslari va oliy ta'limga imtihonsiz kirish imkoniyati.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-content">
+      <span>🔥 <strong>KATTA AKSIYA:</strong> Barcha dasturlash kurslariga chegirma — atigi <strong>480 000 so'm</strong>!</span>
+      <a href="#courses" class="announcement-link">Batafsil ko'rish <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">META <span class="brand-accent">IT SCHOOL</span></span>
+          <span class="brand-sub">Andijon IT Akademiyasi</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">Markaz haqida</a>
+        <a href="#advantages" class="nav-link">Imkoniyatlar</a>
+        <a href="#courses" class="nav-link">Kurslar & Narxlar</a>
+        <a href="#events" class="nav-link">Tadbirlar</a>
+        <a href="#contact" class="nav-link">Aloqa</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tel:+998901234567" class="phone-btn">
+          <i class="fa-solid fa-phone"></i>
+          <span>+998 (90) 123-45-67</span>
+        </a>
+        <button class="btn btn-primary" onclick="openTrialModal()">Bepul sinov darsi</button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menyu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-bg-glow"></div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span>Andijondagi #1 Zamonaviy IT Maktabi</span>
+        </div>
+        <h1 class="hero-title">
+          Kelajak kasblarini <span class="gradient-text">META IT SCHOOL</span> bilan amalda o'rganing!
+        </h1>
+        <p class="hero-description">
+          100% amaliy darslar, xalqaro sertifikat, shaxsiy portfolio va eng muhimi — <strong>oliy ta'lim muassasalariga (institutlarga) imtihonsiz kirish imkoniyati!</strong>
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn btn-primary btn-lg" onclick="openTrialModal()">
+            <i class="fa-solid fa-calendar-check"></i> Bepul sinov darsiga yozilish
+          </button>
+          <button class="btn btn-outline btn-lg" onclick="openChatWithPrompt('Kurslar va aksiya narxlari haqida ma\'lumot bering')">
+            <i class="fa-solid fa-comments"></i> Maslahatchidan so'rash
+          </button>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-avatars">
+            <span class="avatar av-1">👨‍💻</span>
+            <span class="avatar av-2">👩‍💻</span>
+            <span class="avatar av-3">🧑‍💻</span>
+            <span class="avatar av-4">🚀</span>
+          </div>
+          <div class="trust-text">
+            <strong>2,000+</strong> nafardan ortiq o'quvchilar bizga ishonishgan
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card-wrapper">
+        <div class="hero-main-card">
+          <div class="card-header-badge">
+            <i class="fa-solid fa-fire"></i> Katta Chegirmalar Ketmoqda
+          </div>
+          <div class="promo-box">
+            <div class="promo-item">
+              <div class="promo-info">
+                <h4>Frontend Dasturlash</h4>
+                <p>HTML, CSS, JavaScript, React</p>
+              </div>
+              <div class="promo-price">
+                <span class="old-price">620 000 so'm</span>
+                <span class="new-price">480 000 so'm</span>
+              </div>
+            </div>
+            <div class="promo-item">
+              <div class="promo-info">
+                <h4>Backend Dasturlash</h4>
+                <p>Node.js, Python, PostgreSQL, API</p>
+              </div>
+              <div class="promo-price">
+                <span class="old-price">600 000 so'm</span>
+                <span class="new-price">480 000 so'm</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-features-list">
+            <div class="card-feature">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <span>Institutlarga imtihonsiz talaba bo'lish</span>
+            </div>
+            <div class="card-feature">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span>Erkin kovorking va doimiy mentor yordami</span>
+            </div>
+            <div class="card-feature">
+              <i class="fa-solid fa-gift"></i>
+              <span>1-dars mutlaqo bepul!</span>
+            </div>
+          </div>
+
+          <button class="btn btn-accent btn-block" onclick="openTrialModal('Aksiya orqali yozilish')">
+            Chegirmada joy band qilish
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section" id="about">
+    <div class="container">
+      <div class="section-badge">Natijalarimiz</div>
+      <h2 class="section-title">Raqamlarda <span class="gradient-text">META IT SCHOOL</span></h2>
+      <p class="section-subtitle">Andijonda IT sohasiga yangi qadam qo'yayotgan yoshlar uchun qulay va samarali ta'lim maskani</p>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+          <div class="stat-number">130+</div>
+          <div class="stat-label">Faol guruhlar</div>
+          <p class="stat-desc">Har bir guruhda 15 nafardan ortiq iqtidorli o'quvchilar tahsil oladi.</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-user-gear"></i></div>
+          <div class="stat-number">100+</div>
+          <div class="stat-label">Individual o'quvchilar</div>
+          <p class="stat-desc">Yakka tartibda yoki sherigi bilan alohida chuqurlashtirilgan o'qiydiganlar.</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Amaliyot & Sertifikat</div>
+          <p class="stat-desc">To'liq real loyihalar ustida ishlash, shaxsiy portfolio va rasmiy sertifikat.</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <div class="stat-number">OTM</div>
+          <div class="stat-label">Imtihonsiz kirish</div>
+          <p class="stat-desc">Kurslarimizni muvaffaqiyatli tugatganlarga institutga to'g'ridan-to'g'ri kirish imkoniyati.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advantages Section -->
+  <section class="advantages-section" id="advantages">
+    <div class="container">
+      <div class="section-badge">Maxsus imkoniyatlar</div>
+      <h2 class="section-title">Biz sizga nimalarni <span class="gradient-text">taqdim etamiz?</span></h2>
+      <p class="section-subtitle">Bizda nafaqat bilim olasiz, balki qulay muhit va kelajagingiz uchun mustahkam kafolatga ega bo'lasiz</p>
+
+      <div class="advantages-grid">
+        <div class="adv-card highlight-card">
+          <div class="adv-badge">Eng katta imkoniyat</div>
+          <div class="adv-icon"><i class="fa-solid fa-university"></i></div>
+          <h3>Imtihonsiz Talaba Bo'lish</h3>
+          <p>
+            META IT SCHOOL kurslarini a'lo baholarga tamomlagan bitiruvchilarimizga oliy ta'lim muassasalariga (institutlarga) kirish imtihonlarisiz talaba bo'lish imkoniyati beriladi!
+          </p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fa-solid fa-door-open"></i></div>
+          <h3>Erkin Kovorking Muhiti</h3>
+          <p>
+            O'quvchilarimiz har kuni kelib, markaz yopilguniga qadar bemalol o'tirib dars qilishlari, uy vazifalarini bajarishlari mumkin. Hech kim xalaqit bermaydi.
+          </p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <h3>Doimiy Mentor Yordami</h3>
+          <p>
+            Tushunmagan mavzular yoki xatoliklar yuzaga kelsa, professional mentorlarimiz joyida tushuntirib berishadi va to'liq amaliy yordam ko'rsatishadi.
+          </p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <h3>Bepul Birinchi Sinov Darsi</h3>
+          <p>
+            Hech qanday to'lov qilmasdan oldin markaz muhiti, mentorlarimiz va dars o'tish metodikasi bilan shaxsan tanishib olishingiz mumkin.
+          </p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3>Real Portfolio va Loyihalar</h3>
+          <p>
+            Quruq nazariya yo'q! Bitiruvchilarimiz o'zlarining real ishlagan web-sayt va dasturlari portfoliolariga ega bo'lib ish bozoriga chiqadilar.
+          </p>
+        </div>
+
+        <div class="adv-card">
+          <div class="adv-icon"><i class="fa-solid fa-award"></i></div>
+          <h3>Rasmiy Sertifikat</h3>
+          <p>
+            Kursni muvaffaqiyatli tamomlagan barcha o'quvchilarga xalqaro standartlarga mos, ish beruvchilar tomonidan qadrlanadigan rasmiy sertifikat topshiriladi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses & Pricing Section -->
+  <section class="courses-section" id="courses">
+    <div class="container">
+      <div class="section-badge">Zamonaviy Yo'nalishlar</div>
+      <h2 class="section-title">Mavjud Kurslar va <span class="gradient-text">Aksiya Narxlari</span></h2>
+      <p class="section-subtitle">O'zingizga qiziq bo'lgan yo'nalishni tanlang va qulay narxda kelajak kasbini egallang</p>
+
+      <div class="courses-grid">
+        <!-- Frontend -->
+        <div class="course-card featured">
+          <div class="card-ribbon">Aksiya -23%</div>
+          <div class="course-header">
+            <span class="course-cat"><i class="fa-brands fa-html5"></i> Web Dasturlash</span>
+            <h3>Frontend Dasturlash</h3>
+            <p>Veb-saytlar va interaktiv ilovalarning tashqi ko'rinishini noldan professional darajada yaratish.</p>
+          </div>
+          <div class="course-tags">
+            <span>HTML5</span>
+            <span>CSS3 / Tailwind</span>
+            <span>JavaScript</span>
+            <span>React.js</span>
+          </div>
+          <div class="course-pricing">
+            <div class="price-box">
+              <span class="old-p">620 000 so'm</span>
+              <span class="current-p">480 000 <small>so'm/oy</small></span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="openTrialModal('Frontend Dasturlash')">
+              Kursga yozilish
+            </button>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="course-card featured">
+          <div class="card-ribbon">Aksiya -20%</div>
+          <div class="course-header">
+            <span class="course-cat"><i class="fa-solid fa-server"></i> Server & Ma'lumotlar</span>
+            <h3>Backend Dasturlash</h3>
+            <p>Kuchli server arxitekturasi, ma'lumotlar bazasi va xavfsiz tizimlarni qurishni o'rganing.</p>
+          </div>
+          <div class="course-tags">
+            <span>Python</span>
+            <span>Node.js</span>
+            <span>PostgreSQL</span>
+            <span>REST API</span>
+          </div>
+          <div class="course-pricing">
+            <div class="price-box">
+              <span class="old-p">600 000 so'm</span>
+              <span class="current-p">480 000 <small>so'm/oy</small></span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="openTrialModal('Backend Dasturlash')">
+              Kursga yozilish
+            </button>
+          </div>
+        </div>
+
+        <!-- Python -->
+        <div class="course-card">
+          <div class="course-header">
+            <span class="course-cat"><i class="fa-brands fa-python"></i> Dasturlash Tili</span>
+            <h3>Python Dasturlash</h3>
+            <p>Dunyodagi eng ommabop til. Telegram botlar, avtomatlashtirish, ma'lumotlar tahlili va backend.</p>
+          </div>
+          <div class="course-tags">
+            <span>Asoslar</span>
+            <span>OOP</span>
+            <span>Telegram Bot</span>
+            <span>Django / FastAPI</span>
+          </div>
+          <div class="course-pricing">
+            <div class="price-box">
+              <span class="note-p">Chegirmada</span>
+              <span class="contact-p">Admin bilan bog'laning</span>
+            </div>
+            <button class="btn btn-outline btn-block" onclick="openTrialModal('Python Dasturlash')">
+              Ma'lumot olish
+            </button>
+          </div>
+        </div>
+
+        <!-- AI Engineer -->
+        <div class="course-card">
+          <div class="course-header">
+            <span class="course-cat"><i class="fa-solid fa-brain"></i> Sun'iy Intellekt</span>
+            <h3>AI Engineer</h3>
+            <p>Mashinali o'rganish, neyron tarmoqlar, katta til modellari (LLM) va AI ilovalar yaratish.</p>
+          </div>
+          <div class="course-tags">
+            <span>Machine Learning</span>
+            <span>Deep Learning</span>
+            <span>PyTorch</span>
+            <span>LLMs</span>
+          </div>
+          <div class="course-pricing">
+            <div class="price-box">
+              <span class="note-p">Eksklyuziv kurs</span>
+              <span class="contact-p">Admin bilan bog'laning</span>
+            </div>
+            <button class="btn btn-outline btn-block" onclick="openTrialModal('AI Engineer')">
+              Ma'lumot olish
+            </button>
+          </div>
+        </div>
+
+        <!-- Cybersecurity -->
+        <div class="course-card">
+          <div class="course-header">
+            <span class="course-cat"><i class="fa-solid fa-shield-halved"></i> Xavfsizlik</span>
+            <h3>Kiberxavfsizlik (Cybersecurity)</h3>
+            <p>Tizimlarni himoyalash, zaifliklarni aniqlash (Ethical Hacking) va tarmoq xavfsizligi.</p>
+          </div>
+          <div class="course-tags">
+            <span>Linux</span>
+            <span>Network Security</span>
+            <span>Pentest</span>
+            <span>Web Security</span>
+          </div>
+          <div class="course-pricing">
+            <div class="price-box">
+              <span class="note-p">Talabgir kasb</span>
+              <span class="contact-p">Admin bilan bog'laning</span>
+            </div>
+            <button class="btn btn-outline btn-block" onclick="openTrialModal('Kiberxavfsizlik')">
+              Ma'lumot olish
+            </button>
+          </div>
+        </div>
+
+        <!-- Robototexnika -->
+        <div class="course-card">
+          <div class="course-header">
+            <span class="course-cat"><i class="fa-solid fa-robot"></i> Muhandislik</span>
+            <h3>Robototexnika</h3>
+            <p>Sxematexnika, datchiklar, mikrokontrollerlar va aqlli qurilmalarni dasturlash.</p>
+          </div>
+          <div class="course-tags">
+            <span>Arduino</span>
+            <span>C++</span>
+            <span>Sxematexnika</span>
+            <span>IoT</span>
+          </div>
+          <div class="course-pricing">
+            <div class="price-box">
+              <span class="note-p">Amaliy kurs</span>
+              <span class="contact-p">Admin bilan bog'laning</span>
+            </div>
+            <button class="btn btn-outline btn-block" onclick="openTrialModal('Robototexnika')">
+              Ma'lumot olish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events & Tournaments Section -->
+  <section class="events-section" id="events">
+    <div class="container">
+      <div class="section-badge">Qiziqarli Hayot</div>
+      <h2 class="section-title">Chempionatlar va <span class="gradient-text">IT Musobaqalar</span></h2>
+      <p class="section-subtitle">META IT SCHOOL'da darslardan tashqari o'quvchilarimiz uchun har yili katta turnirlar o'tkaziladi</p>
+
+      <div class="events-grid">
+        <div class="event-card">
+          <div class="event-img-wrap">
+            <div class="event-icon-big"><i class="fa-solid fa-futbol"></i></div>
+          </div>
+          <div class="event-body">
+            <h3>Sport O'yinlari</h3>
+            <p>Jamoaviy ruh va salomatlikni mustahkamlash uchun Futbol, Shaxmat va Shashka bo'yicha markaz birinchiliklari.</p>
+            <ul class="event-list">
+              <li><i class="fa-solid fa-check"></i> Yillik META Futbol Kubogi</li>
+              <li><i class="fa-solid fa-check"></i> Aql jangi: Shaxmat va Shashka</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-wrap">
+            <div class="event-icon-big"><i class="fa-solid fa-laptop-code"></i></div>
+          </div>
+          <div class="event-body">
+            <h3>IT Musobaqalar & Xakatonlar</h3>
+            <p>"Eng zo'r dasturchi" tanlovlari, 24 soatlik xakatonlar va real loyihalar taqdimoti.</p>
+            <ul class="event-list">
+              <li><i class="fa-solid fa-check"></i> "Eng zo'r dasturchi" tanlovi</li>
+              <li><i class="fa-solid fa-check"></i> Qimmatbaho sovg'alar va grantlar</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <div class="event-img-wrap">
+            <div class="event-icon-big"><i class="fa-solid fa-gamepad"></i></div>
+          </div>
+          <div class="event-body">
+            <h3>Kibersport Turnirlari</h3>
+            <p>O'quvchilarimizning bo'sh vaqtini maroqli qilish maqsadida Counter-Strike 1.6 va boshqa e-sport turnirlari.</p>
+            <ul class="event-list">
+              <li><i class="fa-solid fa-check"></i> Counter-Strike 1.6 jamoaviy turniri</li>
+              <li><i class="fa-solid fa-check"></i> Do'stona va raqobatbardosh muhit</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Registration Section -->
+  <section class="contact-section" id="contact">
+    <div class="container contact-container">
+      <div class="contact-info">
+        <div class="section-badge">Biz Bilan Bog'laning</div>
+        <h2 class="section-title">Savollaringiz bormi? <br><span class="gradient-text">Biz yordam beramiz!</span></h2>
+        <p>Markazimizga tashrif buyuring, erkin kovorking muhitimizni ko'ring va bepul birinchi darsda qatnashing.</p>
+
+        <div class="contact-items">
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>Manzilimiz:</strong>
+              <p>Andijon shahri, Leninskiy ko'chasi</p>
+            </div>
+          </div>
+
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong>Telefon raqamimiz:</strong>
+              <p><a href="tel:+998901234567">+998 (90) 123-45-67</a></p>
+            </div>
+          </div>
+
+          <div class="c-item">
+            <div class="c-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <strong>Ish vaqtimiz:</strong>
+              <p>Dushanba - Shanba: 08:00 - 20:00 (Kovorking ochiq)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="special-quote">
+          <i class="fa-solid fa-lightbulb"></i>
+          <div>
+            <strong>Eslatma:</strong> Qaysi yo'nalishni tanlashni bilmayotgan bo'lsangiz, virtual maslahatchimizga yozing yoki bepul darsda mentorlarimiz bilan suhbatlashing!
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <div class="form-header">
+          <h3>Bepul sinov darsiga yoziling</h3>
+          <p>Raqamingizni qoldiring, administratorlarimiz 15 daqiqada siz bilan bog'lanishadi.</p>
+        </div>
+
+        <form id="leadForm" onsubmit="handleLeadSubmit(event)">
+          <div class="form-group">
+            <label for="fullName">Ismingiz va Familiyangiz *</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="fullName" placeholder="Masalan: Sardor Aliyev" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phoneNumber">Telefon raqamingiz *</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-phone"></i>
+              <input type="tel" id="phoneNumber" placeholder="+998 (__) ___-__-__" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="selectedCourse">Qiziqqan yo'nalishingiz</label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-graduation-cap"></i>
+              <select id="selectedCourse">
+                <option value="Frontend Dasturlash (480 000 so'm aksiya)">Frontend Dasturlash (480 000 so'm aksiya)</option>
+                <option value="Backend Dasturlash (480 000 so'm aksiya)">Backend Dasturlash (480 000 so'm aksiya)</option>
+                <option value="Python Dasturlash">Python Dasturlash</option>
+                <option value="AI Engineer (Sun'iy intellekt)">AI Engineer (Sun'iy intellekt)</option>
+                <option value="Kiberxavfsizlik">Kiberxavfsizlik</option>
+                <option value="Robototexnika">Robototexnika</option>
+                <option value="Hali tanlamadim, maslahat kerak">Hali tanlamadim, maslahat kerak</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            <i class="fa-solid fa-paper-plane"></i> Joyimni band qilish (Bepul)
+          </button>
+          <p class="form-privacy"><i class="fa-solid fa-lock"></i> Ma'lumotlaringiz xavfsizligi kafolatlanadi.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-col">
+        <div class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-code"></i></div>
+          <div class="logo-text">
+            <span class="brand-name">META <span class="brand-accent">IT SCHOOL</span></span>
+            <span class="brand-sub">Andijon IT Akademiyasi</span>
+          </div>
+        </div>
+        <p class="footer-desc">Andijon shahridagi zamonaviy IT va texnologiyalar o'quv markazi. Kelajak kasblarini noldan professional darajagacha biz bilan o'rganing.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kurslar</h4>
+        <ul>
+          <li><a href="#courses">Frontend Dasturlash</a></li>
+          <li><a href="#courses">Backend Dasturlash</a></li>
+          <li><a href="#courses">Python Dasturlash</a></li>
+          <li><a href="#courses">AI Engineer</a></li>
+          <li><a href="#courses">Kiberxavfsizlik</a></li>
+          <li><a href="#courses">Robototexnika</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Maxsus Imkoniyatlar</h4>
+        <ul>
+          <li><a href="#advantages">Imtihonsiz Institutga Kirish</a></li>
+          <li><a href="#advantages">Erkin Kovorking</a></li>
+          <li><a href="#advantages">Bepul Sinov Darsi</a></li>
+          <li><a href="#events">CS 1.6 & IT Chempionatlar</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bog'lanish</h4>
+        <p><i class="fa-solid fa-location-dot"></i> Andijon sh., Leninskiy ko'chasi</p>
+        <p><i class="fa-solid fa-phone"></i> +998 (90) 123-45-67</p>
+        <div class="social-links">
+          <a href="#" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 META IT SCHOOL. Barcha huquqlar himoyalangan.</p>
+        <p>Andijon, O'zbekiston</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================== -->
+  <!-- VIRTUAL MASLAHATCHI CHATBOT WIDGET            -->
+  <!-- ============================================== -->
+  <div class="chatbot-wrapper" id="chatbotWrapper">
+    <!-- Chat Button Toggle -->
+    <div class="chat-toggle-btn" id="chatToggleBtn" onclick="toggleChatWindow()" title="META Virtual Maslahatchi">
+      <div class="chat-badge-bubble" id="chatNoticeBubble">
+        <span>Assalomu alaykum! Savollaringiz bormi? 👋</span>
+      </div>
+      <div class="chat-icon-inner">
+        <i class="fa-solid fa-comments icon-open"></i>
+        <i class="fa-solid fa-xmark icon-close"></i>
+      </div>
+      <span class="online-status-dot"></span>
+    </div>
+
+    <!-- Chat Window Container -->
+    <div class="chat-window" id="chatWindow">
+      <!-- Chat Header -->
+      <div class="chat-header">
+        <div class="chat-header-avatar">
+          <div class="avatar-circle">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <span class="online-indicator"></span>
+        </div>
+        <div class="chat-header-info">
+          <h4>META Maslahatchi</h4>
+          <p><span class="dot-green"></span> Onlayn | Rasmiy virtual yordamchi</p>
+        </div>
+        <div class="chat-header-actions">
+          <button class="chat-action-btn" onclick="clearChatHistory()" title="Suhbatni tozalash">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+          <button class="chat-action-btn" onclick="toggleChatWindow()" title="Yopish">
+            <i class="fa-solid fa-minus"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Quick Suggestion Buttons -->
+      <div class="quick-chips-bar" id="quickChipsBar">
+        <button class="chip-btn" onclick="sendQuickMessage('🔥 Aksiya narxlari qancha?')">🔥 Aksiya narxlari</button>
+        <button class="chip-btn" onclick="sendQuickMessage('🎓 Institutga imtihonsiz kirish haqida ayting')">🎓 Imtihonsiz institut</button>
+        <button class="chip-btn" onclick="sendQuickMessage('📚 Qanday kurslar bor?')">📚 Barcha kurslar</button>
+        <button class="chip-btn" onclick="sendQuickMessage('💻 Kovorking sharoitlari qanday?')">💻 Kovorking</button>
+        <button class="chip-btn" onclick="sendQuickMessage('🏆 Chempionat va musobaqalar bormi?')">🏆 Chempionatlar</button>
+        <button class="chip-btn" onclick="sendQuickMessage('📍 Manzil va telefon raqam')">📍 Manzil & Aloqa</button>
+      </div>
+
+      <!-- Messages Body -->
+      <div class="chat-messages" id="chatMessages">
+        <!-- Message bubbles dynamically injected by script.js -->
+      </div>
+
+      <!-- Typing Indicator -->
+      <div class="typing-indicator" id="typingIndicator">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <span>Maslahatchi yozmoqda...</span>
+      </div>
+
+      <!-- Chat Input Area -->
+      <form class="chat-input-area" id="chatForm" onsubmit="handleChatSubmit(event)">
+        <input 
+          type="text" 
+          id="chatInput" 
+          placeholder="Savolingizni yozing..." 
+          autocomplete="off" 
+          required
+        >
+        <button type="submit" class="chat-send-btn" id="chatSendBtn" aria-label="Yuborish">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Registration Modal for Sinov Darsi -->
+  <div class="modal-overlay" id="trialModal" onclick="handleModalBackdrop(event)">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeTrialModal()">&times;</button>
+      <div class="modal-header">
+        <div class="modal-icon"><i class="fa-solid fa-gift"></i></div>
+        <h3>Bepul Sinov Darsiga Yozilish</h3>
+        <p>Hech qanday majburiyatsiz, 1-darsda bepul qatnashing va markazimiz bilan tanishing!</p>
+      </div>
+      <form id="modalLeadForm" onsubmit="handleModalSubmit(event)">
+        <div class="form-group">
+          <label>Ismingiz *</label>
+          <input type="text" id="modalName" placeholder="Ismingizni kiriting" required>
+        </div>
+        <div class="form-group">
+          <label>Telefon raqamingiz *</label>
+          <input type="tel" id="modalPhone" placeholder="+998 (__) ___-__-__" required>
+        </div>
+        <div class="form-group">
+          <label>Yo'nalishni tanlang</label>
+          <select id="modalCourse">
+            <option value="Frontend Dasturlash (480 000 so'm aksiya)">Frontend Dasturlash (480 000 so'm)</option>
+            <option value="Backend Dasturlash (480 000 so'm aksiya)">Backend Dasturlash (480 000 so'm)</option>
+            <option value="Python Dasturlash">Python Dasturlash</option>
+            <option value="AI Engineer (Sun'iy intellekt)">AI Engineer (Sun'iy intellekt)</option>
+            <option value="Kiberxavfsizlik">Kiberxavfsizlik</option>
+            <option value="Robototexnika">Robototexnika</option>
+            <option value="Boshqa / Maslahat kerak">Boshqa / Maslahat kerak</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block btn-lg">
+          Ariza qoldirish
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <i class="fa-solid fa-circle-check"></i>
+    <span id="toastMessage">Xabaringiz muvaffaqiyatli qabul qilindi!</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
